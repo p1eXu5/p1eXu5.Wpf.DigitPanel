@@ -51,6 +51,12 @@ public class TimerTable : DigitTableBase
                 continue;
             }
 
+            if (s[i] == '.')
+            {
+                digits.Last().Dot = true;
+                continue;
+            }
+
             digits.Add(_dagitMap[s[i]]());
         }
 
