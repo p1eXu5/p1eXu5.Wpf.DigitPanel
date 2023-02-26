@@ -4,10 +4,28 @@ p1eXu5.Wpf.DigitPanel
 ### Usage:
 
 ```xml
-<UserControl ...
+<Application x:Class="YourApp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:digitPanel="clr-namespace:p1eXu5.Wpf.DigitPanel;assembly=p1eXu5.Wpf.DigitPanel"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <digitPanel:DigitPanelTheme />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+```
+
+```xml
+<Window ...
              xmlns:digitPanel="clr-namespace:p1eXu5.Wpf.DigitPanel;assembly=p1eXu5.Wpf.DigitPanel"
              ...
+             Background="{DynamicResource {x:Static digitPanel:DigitPanelColors.DigitPanelBackgroundKey}}"
              >
+             
   <digitPanel:Digit DockPanel.Dock="Left" Foreground="#FF0000" Background="#BBBBBB" IsDotOn="True" DotVisibility="Collapsed" Width="160" Mask="0"/>
 
   <digitPanel:DigitTable Grid.Column="0" 
