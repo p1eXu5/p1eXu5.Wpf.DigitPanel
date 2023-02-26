@@ -14,7 +14,7 @@
     <FileVersion>1.0.1.0</FileVersion>
     <RepositoryUrl>https://github.com/p1eXu5/p1eXu5.Wpf.DigitPanel</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>digit panel;digit;wpf;control</PackageTags>
+    <PackageTags>digit;panel;wpf;control</PackageTags>
   </PropertyGroup>
 
 </Project>
