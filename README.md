@@ -1,7 +1,9 @@
 p1eXu5.Wpf.DigitPanel
 =====================
 
-### Usage:
+![digit-panel](./images/digit-panel.png)
+
+## Usage:
 
 ```xml
 <Application x:Class="YourApp"
