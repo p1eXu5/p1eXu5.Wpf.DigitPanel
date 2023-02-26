@@ -12,17 +12,19 @@ jobs:
   publish:
     # Name the Job
     name: Publish
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
-    # Checks out a copy of your repository on the ubuntu-latest machine
+    # Checks out a copy of your repository on the windows-latest machine
     - name: Checkout code
       uses: actions/checkout@v3
       
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: |
+          6.x
+          7.x
         
     - name: Install dependencies
       run: dotnet restore
