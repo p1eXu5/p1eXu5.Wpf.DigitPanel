@@ -5,16 +5,16 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>p1eXu5</Authors>
     <Description>Digit panel control.</Description>
     <Copyright>2023 Vladimir Likhatskiy</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <AssemblyVersion>1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <RepositoryUrl>https://github.com/p1eXu5/p1eXu5.Wpf.DigitPanel</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>digit panel;digit;wpf;control</PackageTags>
+    <PackageTags>digit;panel;wpf;control;library</PackageTags>
   </PropertyGroup>
 
 </Project>
