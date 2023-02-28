@@ -1,6 +1,10 @@
 p1eXu5.Wpf.DigitPanel
 =====================
 
+| Package                     | Versions                                                                                                                     |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| p1eXu5.Wpf.DigitPanel       | [![NuGet](https://img.shields.io/badge/nuget-1.0.1-brightgreen)](https://www.nuget.org/packages/p1eXu5.Wpf.DigitPanel/1.0.1) |
+
 ![digit-panel](./images/digit-panel.png)
 
 ## Usage:
