@@ -27,11 +27,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M39.49,18.6c-1.76,10.54-7.55,45.14-9.39,56.13a.66.66,0,0,1-.23.4l-9.46,8a.68.68,0,0,1-1-.08L13,75.45a.7.7,0,0,1-.16-.57l10.1-60.41A17,17,0,0,1,27.74,5a.35.35,0,0,1,.51,0c1.58,1.87,9.7,11.44,11.09,13.1A.63.63,0,0,1,39.49,18.6Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect ShadowDepth="0"  />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_2"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -40,24 +36,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M120.92,5.5,107.53,16.84a.66.66,0,0,1-.44.16H41.39a.69.69,0,0,1-.53-.25L29.79,3.67a.36.36,0,0,1,.06-.51,17,17,0,0,1,9-3.16h70.88A17,17,0,0,1,121,5,.35.35,0,0,1,120.92,5.5Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_3"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -66,24 +45,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M125.9,17c0,1.08-8.76,53.72-9.43,57.74a.66.66,0,0,1-.23.4l-9.47,8a.68.68,0,0,1-1-.08l-6.44-7.62a.65.65,0,0,1-.16-.55C101,64,108,22.3,108.6,18.75a.66.66,0,0,1,.23-.4L122.21,7a.36.36,0,0,1,.51.06A17,17,0,0,1,125.9,17Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_4"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -92,24 +54,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M104.19,85.34l-9.45,8a.67.67,0,0,1-.45.16H28.6a.71.71,0,0,1-.53-.24l-6.44-7.62a.69.69,0,0,1,.08-1l9.45-8a.65.65,0,0,1,.44-.16H97.3a.69.69,0,0,1,.53.25l6.44,7.61A.69.69,0,0,1,104.19,85.34Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_5"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -118,24 +63,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M26.7,95.12l-9.39,56.1a.68.68,0,0,1-.23.41L3.68,163a.34.34,0,0,1-.5-.06A17.14,17.14,0,0,1,.35,149.57a.09.09,0,0,1,0,0L9.43,95.28a.63.63,0,0,1,.23-.41c1.44-1.23,7.41-6.28,9.47-8a.69.69,0,0,1,1,.09l6.44,7.61A.74.74,0,0,1,26.7,95.12Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_6"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -144,24 +72,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M96.12,166.34a.34.34,0,0,1-.06.5A17,17,0,0,1,87,170H16.13A16.92,16.92,0,0,1,5,165a.35.35,0,0,1,0-.51l13.38-11.34a.71.71,0,0,1,.45-.16H84.51a.69.69,0,0,1,.53.24Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_7"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -170,24 +81,7 @@
                                                                           Converter={StaticResource conv_RadiusToOpacity}}"
                                   local:Digit.PathFill="{TemplateBinding Background}"
                                   Data="M112.9,94.54a.74.74,0,0,1,.16.57c-.8,4.77-10.24,61.24-10.26,61.35a17,17,0,0,1-4.64,8.6.35.35,0,0,1-.51,0C96.11,163.22,88,153.62,86.57,152a.67.67,0,0,1-.16-.56L95.8,95.27a.61.61,0,0,1,.23-.41l9.46-8a.67.67,0,0,1,1,.08C107.89,88.64,111.84,93.3,112.9,94.54Z"
-                                  >
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
-                            </Path>
+                                  />
                             <Path x:Name="PART_Dot"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
                                                                          RelativeSource={RelativeSource TemplatedParent}}"
@@ -204,22 +98,6 @@
                                                      RadiusY="8.5"
                                                      />
                                 </Path.Data>
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
                             </Path>
                             <Path x:Name="PART_Colon"
                                   local:Digit.DropShadowRadius="{Binding InactiveRadius,
@@ -243,22 +121,6 @@
                                                          />
                                     </GeometryGroup>
                                 </Path.Data>
-                                <!--<Path.Effect>
-                                    <DropShadowEffect BlurRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                          AncestorType=Path,
-                                                                                                          AncestorLevel=1},
-                                                                           Path=(local:Digit.DropShadowRadius)}"
-                                                      ShadowDepth="0"
-                                                      Opacity="{Binding RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                       AncestorType=Path,
-                                                                                                       AncestorLevel=1},
-                                                                        Path=(local:Digit.DropShadowOpacity)}"
-                                                      Color="{Binding Fill.Color,
-                                                                      RelativeSource={RelativeSource Mode=FindAncestor,
-                                                                                                     AncestorType=Path,
-                                                                                                     AncestorLevel=1}}"
-                                                      />
-                                </Path.Effect>-->
                             </Path>
                         </Grid>
                     </Viewbox>
