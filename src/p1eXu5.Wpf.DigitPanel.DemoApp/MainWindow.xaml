@@ -1,0 +1,122 @@
+﻿<Window x:Class="p1eXu5.Wpf.DigitPanel.DemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:p1eXu5.Wpf.DigitPanel.DemoApp"
+        xmlns:digitPanel="clr-namespace:p1eXu5.Wpf.DigitPanel;assembly=p1eXu5.Wpf.DigitPanel"
+        Title="MainWindow"
+        Width="900"
+        Height="580"
+        Background="{DynamicResource {x:Static digitPanel:DigitPanelColors.DigitPanelBackgroundKey}}"
+        mc:Ignorable="d"
+        >
+    <StackPanel Margin="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical"
+                Grid.IsSharedSizeScope="True"
+                >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"
+                                  SharedSizeGroup="g_Control"
+                                  />
+                <ColumnDefinition Width="Auto"
+                                  SharedSizeGroup="g_Settings"
+                                  />
+            </Grid.ColumnDefinitions>
+            <digitPanel:Digit Grid.Column="0"
+                              x:Name="m_Digit"
+                              Width="100"
+                              HorizontalAlignment="Right"
+                              Foreground="#FF0000"
+                              Background="#BBBBBB"
+                              IsDotOn="False"
+                              IsColonOn="False"
+                              ColonVisibility="Visible"
+                              DotVisibility="Visible"
+                              Mask="1,1,0,0,0,0,0"
+                              InactiveRadius="0"
+                              ActiveRadius="8"
+                              />
+            <StackPanel Grid.Column="1"
+                        Margin="50,0,0,0"
+                        Orientation="Vertical"
+                        TextElement.Foreground="#FAFAFA"
+                        >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="100">Top Left:</TextBlock>
+                    <CheckBox x:Name="m_TopLeft"
+                              Margin="10,0,0,0"
+                              HorizontalAlignment="Right"
+                              IsThreeState="False"
+                              IsChecked="True"
+                              Checked="m_TopLeft_Checked"
+                              Unchecked="m_TopLeft_Checked"
+                              />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="100">Top Middle:</TextBlock>
+                    <CheckBox x:Name="m_TopMiddle"
+                              Margin="10,0,0,0"
+                              IsThreeState="False"
+                              IsChecked="True"
+                              Checked="m_TopLeft_Checked"
+                              Unchecked="m_TopLeft_Checked"
+                              />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"
+                                  SharedSizeGroup="g_Control"
+                                  />
+                <ColumnDefinition Width="Auto"
+                                  SharedSizeGroup="g_Settings"
+                                  />
+            </Grid.ColumnDefinitions>
+            <digitPanel:DigitTable Grid.Column="0"
+                                   x:Name="m_DigitTable"
+                                   Margin="0,50"
+                                   HorizontalAlignment="Right"
+                                   DigitWidth="100"
+                                   Format="##0.00"
+                                   Value="0"
+                                   />
+            <Button Grid.Column="1"
+                    Content="Seed"
+                    Width="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="SeedDigitTable"
+                    />
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"
+                                  SharedSizeGroup="g_Control"
+                                  />
+                <ColumnDefinition Width="Auto"
+                                  SharedSizeGroup="g_Settings"
+                                  />
+            </Grid.ColumnDefinitions>
+            <digitPanel:TimerTable Grid.Column="0"
+                                   x:Name="m_TimerTable"
+                                   HorizontalAlignment="Right"
+                                   DigitWidth="100"
+                                   Value="12:12:12"
+                                   />
+            <Button Grid.Column="1"
+                    Content="Seed"
+                    Width="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="SeedTimerTable"
+                    />
+        </Grid>
+    </StackPanel>
+</Window>

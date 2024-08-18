@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{62A327BA-B47
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p1eXu5.Wpf.DigitPanel", "src\p1eXu5.Wpf.DigitPanel\p1eXu5.Wpf.DigitPanel.csproj", "{722E435E-3A6E-4ABB-A6C1-D7EAAE76D632}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p1eXu5.Wpf.DigitPanel.DemoApp", "src\p1eXu5.Wpf.DigitPanel.DemoApp\p1eXu5.Wpf.DigitPanel.DemoApp.csproj", "{3B6E6DCA-3B36-423B-9AA3-6783CF379C75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{722E435E-3A6E-4ABB-A6C1-D7EAAE76D632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{722E435E-3A6E-4ABB-A6C1-D7EAAE76D632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{722E435E-3A6E-4ABB-A6C1-D7EAAE76D632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6E6DCA-3B36-423B-9AA3-6783CF379C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6E6DCA-3B36-423B-9AA3-6783CF379C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6E6DCA-3B36-423B-9AA3-6783CF379C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6E6DCA-3B36-423B-9AA3-6783CF379C75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{722E435E-3A6E-4ABB-A6C1-D7EAAE76D632} = {62A327BA-B475-4D0E-B1FB-549246502714}
+		{3B6E6DCA-3B36-423B-9AA3-6783CF379C75} = {62A327BA-B475-4D0E-B1FB-549246502714}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97C1EBC0-9CDD-4B70-8972-2CA8D43018C5}

@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
 
@@ -24,6 +26,46 @@ public class Digit : Control
         DefaultStyleKeyProperty.OverrideMetadata(typeof(Digit), new FrameworkPropertyMetadata(typeof(Digit)));
     }
 
+    public override void OnApplyTemplate()
+    {
+        base.OnApplyTemplate();
+        var path = (Path)GetTemplateChild("PART_1");
+
+        Color? activeColor =
+            Foreground is SolidColorBrush fc ? fc.Color : null;
+
+        Color? inactiveColor =
+            Background is SolidColorBrush bc ? bc.Color : null;
+
+        void setPathEffect(Path path, bool isOn)
+        {
+            var effect = new DropShadowEffect() { 
+                ShadowDepth = 0, 
+                BlurRadius = isOn ? ActiveRadius : InactiveRadius, 
+                Opacity = isOn ? (ActiveRadius > 0 ? 1 : 0) : (InactiveRadius > 0 ? 1 : 0),
+            };
+
+            if (isOn && activeColor.HasValue)
+            {
+                effect.Color = activeColor.Value;
+            }
+
+            if (!isOn && inactiveColor.HasValue) {
+                effect.Color = inactiveColor.Value;
+            }
+
+            path.Effect = effect;
+        }
+        setPathEffect((Path)GetTemplateChild("PART_1"), IsTopLeftOn);
+        setPathEffect((Path)GetTemplateChild("PART_2"), IsTopMiddleOn);
+        setPathEffect((Path)GetTemplateChild("PART_3"), IsTopRightOn);
+        setPathEffect((Path)GetTemplateChild("PART_4"), IsMiddleOn);
+        setPathEffect((Path)GetTemplateChild("PART_5"), IsBottomLeftOn);
+        setPathEffect((Path)GetTemplateChild("PART_6"), IsBottomMiddleOn);
+        setPathEffect((Path)GetTemplateChild("PART_7"), IsBottomRightOn);
+        setPathEffect((Path)GetTemplateChild("PART_Dot"), IsDotOn);
+        setPathEffect((Path)GetTemplateChild("PART_Colon"), IsColonOn);
+    }
 
     public string? Mask
     {
@@ -72,6 +114,8 @@ public class Digit : Control
 
     #region DropShadowRadius
 
+    internal const double DefaultDropShadowRadius = 8.0;
+
     internal static double GetDropShadowRadius(UIElement target) =>
         (double)target.GetValue(DropShadowRadiusProperty);
 
@@ -85,7 +129,20 @@ public class Digit : Control
             "DropShadowRadius",
             typeof(double),
             typeof(Digit),
-            new FrameworkPropertyMetadata(8.0, FrameworkPropertyMetadataOptions.AffectsRender));
+            new FrameworkPropertyMetadata(
+                DefaultDropShadowRadius,
+                FrameworkPropertyMetadataOptions.AffectsRender,
+                OnDropShadowRadiusChanged
+                ));
+
+    private static void OnDropShadowRadiusChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (d is Path p && p.Effect is DropShadowEffect effect)
+        {
+            effect.BlurRadius = (double)e.NewValue;
+            return;
+        }
+    }
 
     #endregion ───────────────────────────────────────────────────── DropShadowRadius ─┘
 
@@ -104,9 +161,64 @@ public class Digit : Control
             "DropShadowOpacity",
             typeof(double),
             typeof(Digit),
-            new FrameworkPropertyMetadata(1.0, FrameworkPropertyMetadataOptions.AffectsRender));
+            new FrameworkPropertyMetadata(
+                1.0,
+                FrameworkPropertyMetadataOptions.AffectsRender,
+                OnDropShadowOpacityChanged
+                ));
+
+    private static void OnDropShadowOpacityChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (d is Path p && p.Effect is DropShadowEffect effect)
+        {
+            effect.Opacity = (double)e.NewValue;
+            return;
+        }
+    }
 
     #endregion ───────────────────────────────────────────────────── DropShadowRadius ─┘
+
+
+
+    public static Brush GetPathFill(DependencyObject obj)
+    {
+        return (Brush)obj.GetValue(PathFillProperty);
+    }
+
+    public static void SetPathFill(DependencyObject obj, Brush value)
+    {
+        obj.SetValue(PathFillProperty, value);
+    }
+
+    // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+    public static readonly DependencyProperty PathFillProperty =
+        DependencyProperty.RegisterAttached(
+            "PathFill",
+            typeof(Brush), 
+            typeof(Digit),
+            new FrameworkPropertyMetadata(
+                null,
+                FrameworkPropertyMetadataOptions.AffectsRender,
+                OnPathFillChanged
+                ));
+
+    private static void OnPathFillChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        if (d is Path p)
+        {
+            p.Fill = (Brush)e.NewValue;
+            if (p.Effect is DropShadowEffect effect)
+            {
+                if (e.NewValue is SolidColorBrush solidColorBrush)
+                {
+                    effect.Color = solidColorBrush.Color;
+
+                    return;
+                }
+            }
+        }
+    }
+
 
 
     #region ActiveRadius
@@ -128,7 +240,7 @@ public class Digit : Control
     #endregion ───────────────────────────────────────────────────── ActiveRadius ─┘
 
 
-        #region InactiveRadius
+    #region InactiveRadius
 
     public double InactiveRadius
     {
@@ -285,7 +397,9 @@ public class Digit : Control
             "IsColonOn",
             typeof(bool),
             typeof(Digit),
-            new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender));
+            new FrameworkPropertyMetadata(
+                false, 
+                FrameworkPropertyMetadataOptions.AffectsRender));
 
     public Visibility ColonVisibility
     {
@@ -299,5 +413,7 @@ public class Digit : Control
             "ColonVisibility",
             typeof(Visibility),
             typeof(Digit),
-            new FrameworkPropertyMetadata(Visibility.Visible, FrameworkPropertyMetadataOptions.AffectsRender));
+            new FrameworkPropertyMetadata(
+                Visibility.Visible,
+                FrameworkPropertyMetadataOptions.AffectsRender));
 }
